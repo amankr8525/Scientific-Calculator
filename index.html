@@ -1,0 +1,71 @@
+<!-- scientific calculator -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Scientific Calculator</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="display">
+                <div class="history" id="history"></div>
+                <div class="result" id="result">0</div>
+            </div>
+            <div class="buttons">
+                <!-- Row 1: Scientific -->
+                <button class="btn sci" onclick="appendFunction('sin(')">sin</button>
+                <button class="btn sci" onclick="appendFunction('cos(')">cos</button>
+                <button class="btn sci" onclick="appendFunction('tan(')">tan</button>
+                <button class="btn sci" onclick="appendFunction('log(')">log</button>
+                <button class="btn sci" onclick="appendFunction('ln(')">ln</button>
+                
+                <!-- Row 2: Scientific & Math -->
+                <button class="btn sci" onclick="appendFunction('sqrt(')">√</button>
+                <button class="btn sci" onclick="appendValue('**')">xʸ</button>
+                <button class="btn sci" onclick="appendValue('Math.PI', 'π')">π</button>
+                <button class="btn sci" onclick="appendValue('Math.E', 'e')">e</button>
+                <button class="btn sci" onclick="appendValue('!')">x!</button>
+
+                <!-- Row 3: Parentheses & Basic Ops -->
+                <button class="btn sci" onclick="appendValue('(')">(</button>
+                <button class="btn sci" onclick="appendValue(')')">)</button>
+                <button class="btn action clear" onclick="clearDisplay()">AC</button>
+                <button class="btn action delete" onclick="deleteChar()">DEL</button>
+                <button class="btn op" onclick="appendValue('/', '÷')">÷</button>
+                
+                <!-- Row 4 -->
+                <button class="btn num" onclick="appendValue('7')">7</button>
+                <button class="btn num" onclick="appendValue('8')">8</button>
+                <button class="btn num" onclick="appendValue('9')">9</button>
+                <button class="btn empty"></button>
+                <button class="btn op" onclick="appendValue('*', '×')">×</button>
+
+                <!-- Row 5 -->
+                <button class="btn num" onclick="appendValue('4')">4</button>
+                <button class="btn num" onclick="appendValue('5')">5</button>
+                <button class="btn num" onclick="appendValue('6')">6</button>
+                <button class="btn empty"></button>
+                <button class="btn op" onclick="appendValue('-', '-')">−</button>
+
+                <!-- Row 6 -->
+                <button class="btn num" onclick="appendValue('1')">1</button>
+                <button class="btn num" onclick="appendValue('2')">2</button>
+                <button class="btn num" onclick="appendValue('3')">3</button>
+                <button class="btn empty"></button>
+                <button class="btn op" onclick="appendValue('+', '+')">+</button>
+
+                <!-- Row 7 -->
+                <button class="btn num zero span-2" onclick="appendValue('0')">0</button>
+                <button class="btn num" onclick="appendValue('.')">.</button>
+                <button class="btn equal span-2" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/script.js"></script>
+</body>
+</html>
